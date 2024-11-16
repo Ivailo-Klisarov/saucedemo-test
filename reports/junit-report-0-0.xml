@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="10" failures="5" errors="0" skipped="0">
+  <testsuite name="Login functionality for Swag Labs application" timestamp="2024-11-16T05:15:12" time="9.575" tests="10" failures="5" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="featureName" value="Login functionality for Swag Labs application"/>
+      <property name="capabilities" value="chrome.130_0_6723_117.windows"/>
+      <property name="featureFile" value="file:///C:/Users/Super%20Fast/Documents/saucedemo_test/src/features/login.feature"/>
+    </properties>
+    <testcase classname="CucumberJUnitReport-chrome.130_0_6723_117.windows.Login functionality for Swag Labs application" name="Login with empty credentials" time="1.362">
+      <failure message="AssertionError"/>
+      <system-out><![CDATA[
+✅ Given I open the Swag Labs login page
+✅ When I enter "<username>" into the "Username" field✅ And I enter "<password>" into the "Password" field✅ And I clear the "Username" field✅ And I clear the "Password" field✅ And I click on the "Login" button❗ Then I should see the error message "<errorMessage>"
+]]></system-out>
+      <system-err><![CDATA[
+AssertionError
+    + expected - actual
+
+    -Epic sadface: Username is required
+    +<errorMessage>
+
+    at World.<anonymous> (C:\Users\Super Fast\Documents\saucedemo_test\src\step-definitions\then.steps.js:18:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+]]></system-err>
+    </testcase>
+    <testcase classname="CucumberJUnitReport-chrome.130_0_6723_117.windows.Login functionality for Swag Labs application" name="Login with username only" time="0.27">
+      <failure message="AssertionError"/>
+      <system-out><![CDATA[
+✅ Given I open the Swag Labs login page
+✅ When I enter "<username>" into the "Username" field✅ And I click on the "Login" button❗ Then I should see the error message "<errorMessage>"
+]]></system-out>
+      <system-err><![CDATA[
+AssertionError
+    + expected - actual
+
+    -Epic sadface: Password is required
+    +<errorMessage>
+
+    at World.<anonymous> (C:\Users\Super Fast\Documents\saucedemo_test\src\step-definitions\then.steps.js:18:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+]]></system-err>
+    </testcase>
+    <testcase classname="CucumberJUnitReport-chrome.130_0_6723_117.windows.Login functionality for Swag Labs application" name="Login with valid credentials" time="0.376">
+      <failure message="AssertionError"/>
+      <system-out><![CDATA[
+✅ Given I open the Swag Labs login page
+✅ When I enter "testuser" into the "Username" field✅ And I enter "wrongpass" into the "Password" field✅ And I click on the "Login" button❗ Then the "Swag Labs" web page should open
+]]></system-out>
+      <system-err><![CDATA[
+AssertionError
+    + expected - actual
+
+    -https://www.saucedemo.com/
+    +https://www.saucedemo.com/inventory.html
+
+    at World.<anonymous> (C:\Users\Super Fast\Documents\saucedemo_test\src\step-definitions\then.steps.js:28:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+]]></system-err>
+    </testcase>
+    <testcase classname="CucumberJUnitReport-chrome.130_0_6723_117.windows.Login functionality for Swag Labs application" name="Login with valid credentials" time="0.304">
+      <failure message="AssertionError"/>
+      <system-out><![CDATA[
+✅ Given I open the Swag Labs login page
+✅ When I enter "emptyuser" into the "Username" field✅ And I enter "" into the "Password" field✅ And I click on the "Login" button❗ Then the "Swag Labs" web page should open
+]]></system-out>
+      <system-err><![CDATA[
+AssertionError
+    + expected - actual
+
+    -https://www.saucedemo.com/
+    +https://www.saucedemo.com/inventory.html
+
+    at World.<anonymous> (C:\Users\Super Fast\Documents\saucedemo_test\src\step-definitions\then.steps.js:28:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+]]></system-err>
+    </testcase>
+    <testcase classname="CucumberJUnitReport-chrome.130_0_6723_117.windows.Login functionality for Swag Labs application" name="Login with valid credentials" time="0.425">
+      <system-out><![CDATA[
+✅ Given I open the Swag Labs login page
+✅ When I enter "standard_user" into the "Username" field✅ And I enter "secret_sauce" into the "Password" field✅ And I click on the "Login" button✅ Then the "Swag Labs" web page should open
+]]></system-out>
+    </testcase>
+    <testcase classname="CucumberJUnitReport-chrome.130_0_6723_117.windows.Login functionality for Swag Labs application" name="Login with valid credentials" time="0.375">
+      <failure message="AssertionError"/>
+      <system-out><![CDATA[
+✅ Given I open the Swag Labs login page
+✅ When I enter "locked_out_user" into the "Username" field✅ And I enter "secret_sauce" into the "Password" field✅ And I click on the "Login" button❗ Then the "Swag Labs" web page should open
+]]></system-out>
+      <system-err><![CDATA[
+AssertionError
+    + expected - actual
+
+    -https://www.saucedemo.com/
+    +https://www.saucedemo.com/inventory.html
+
+    at World.<anonymous> (C:\Users\Super Fast\Documents\saucedemo_test\src\step-definitions\then.steps.js:28:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+]]></system-err>
+    </testcase>
+    <testcase classname="CucumberJUnitReport-chrome.130_0_6723_117.windows.Login functionality for Swag Labs application" name="Login with valid credentials" time="0.379">
+      <system-out><![CDATA[
+✅ Given I open the Swag Labs login page
+✅ When I enter "problem_user" into the "Username" field✅ And I enter "secret_sauce" into the "Password" field✅ And I click on the "Login" button✅ Then the "Swag Labs" web page should open
+]]></system-out>
+    </testcase>
+    <testcase classname="CucumberJUnitReport-chrome.130_0_6723_117.windows.Login functionality for Swag Labs application" name="Login with valid credentials" time="5.373">
+      <system-out><![CDATA[
+✅ Given I open the Swag Labs login page
+✅ When I enter "performance_glitch_user" into the "Username" field✅ And I enter "secret_sauce" into the "Password" field✅ And I click on the "Login" button✅ Then the "Swag Labs" web page should open
+]]></system-out>
+    </testcase>
+    <testcase classname="CucumberJUnitReport-chrome.130_0_6723_117.windows.Login functionality for Swag Labs application" name="Login with valid credentials" time="0.326">
+      <system-out><![CDATA[
+✅ Given I open the Swag Labs login page
+✅ When I enter "error_user" into the "Username" field✅ And I enter "secret_sauce" into the "Password" field✅ And I click on the "Login" button✅ Then the "Swag Labs" web page should open
+]]></system-out>
+    </testcase>
+    <testcase classname="CucumberJUnitReport-chrome.130_0_6723_117.windows.Login functionality for Swag Labs application" name="Login with valid credentials" time="0.349">
+      <system-out><![CDATA[
+✅ Given I open the Swag Labs login page
+✅ When I enter "visual_user" into the "Username" field✅ And I enter "secret_sauce" into the "Password" field✅ And I click on the "Login" button✅ Then the "Swag Labs" web page should open
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
